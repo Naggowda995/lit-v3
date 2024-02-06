@@ -1,0 +1,76 @@
+.add-requirement-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light Blue */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+   
+  /* Heading styles */
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+   
+  /* Table styles */
+  table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    background-color: #fff; /* White */
+  }
+   
+  td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+   
+  /* Input styles */
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+   
+  /* Radio button and checkbox styles */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+   
+  /* Checkbox styles */
+  .Raidobutton label {
+    margin-right: 15px;
+  }
+   
+  /* Submit button styles */
+  .ckeckbox label {
+    display: block;
+    margin-top: 10px;
+  }
+   
+  .check1 {
+    margin-bottom: 15px;
+  }
+   
+  /* Submit button styles */
+  button {
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   
+  /* Reset button styles */
+  button.reset {
+    background-color: #f44336; /* Red */
+  }
+   
+  /* Hover effect on buttons */
+  button:hover {
+    opacity: 0.8;
+  }

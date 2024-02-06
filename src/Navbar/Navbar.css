@@ -1,0 +1,55 @@
+.active{
+  background-color: darkolivegreen;
+}
+
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  flex-direction: row;
+
+  max-width: 100%;
+  min-height: 15vh;
+  background-color: gray/* Dark gray background color */
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+
+/* Logo image */
+.img {
+  position: sticky;
+  height: 15vh;
+  width: 15vw; 
+  margin: 0;
+  border-radius: 1px;
+}
+
+
+/* Navigation links */
+.navbar-nav .nav-link {
+  color: black;
+  font-weight: bold;
+}
+
+
+/* User information section */
+.userInfo {
+  cursor: pointer;
+}
+
+
+/* User icon */
+.user_icon {
+  margin-right: 3vw;
+  height: 8vh;
+  width: 10vw;
+  color: #fff; /* White color or any contrasting color */
+}
+
+
+/* Dropdown menu items */
+.dropdown-menu .dropdown-item {
+  color: black; /* Set text color to black */
+}

@@ -1,0 +1,56 @@
+/* Vender_registration.css */
+ 
+.Register-form {
+    /* max-width: 600px; */
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f9fa; /* Light gray background color */
+    border: 4px solid #17a2b8; /* Increased outer border size and color for the form container */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the content */
+  }
+   
+  h4 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #17a2b8; /* Color for the form title */
+  }
+   
+  .form-section {
+    margin-top: 20px;
+  }
+   
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px; /* Font size for labels */
+    color: #495057; /* Text color for labels */
+  }
+   
+  input,
+  textarea {
+    width: calc(100% - 24px); /* Adjusted width to account for border and padding */
+    padding: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid #17a2b8; /* Border color for input fields */
+    border-radius: 8px;
+    font-size: 16px; /* Font size for input fields */
+    background-color: #ffffff; /* White background color for input fields */
+  }
+   
+  button {
+    background-color: #28a745; /* Green background color for the submit button */
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Font size for the submit button */
+  }
+   
+  button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }

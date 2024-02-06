@@ -1,0 +1,70 @@
+/* Registration.css */
+ 
+.registration-form {
+    max-width: 800px;
+    margin: auto;
+  }
+ 
+  .form-section {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+ 
+  .form-section h6 {
+    cursor: pointer;
+    color: #333;
+  }
+ 
+  .form-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+ 
+  .form-section table th, .form-section table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+ 
+  /* Add specific styles for input fields, checkboxes, textareas, etc. */
+ 
+  /* Example: Style for input fields */
+  .form-section input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+ 
+  /* Example: Style for checkboxes */
+  .form-section input[type="checkbox"] {
+    margin-right: 5px;
+  }
+ 
+  /* Example: Style for textareas */
+  .form-section textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+ 
+  /* Add more specific styles as needed */
+ 
+  /* Additional Styles */
+  .d-flex {
+    display: flex;
+  }
+ 
+  .justify-content-between {
+    justify-content: space-between;
+  }
+ 
+  .mt-5 {
+    margin-top: 5px;
+  }
+ 
+  /* Add more specific styles as needed */

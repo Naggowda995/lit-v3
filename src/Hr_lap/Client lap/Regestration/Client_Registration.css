@@ -1,0 +1,35 @@
+.Register-form {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="time"] {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Additional Styling - Feel free to customize */
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}

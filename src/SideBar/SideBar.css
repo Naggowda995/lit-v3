@@ -1,0 +1,22 @@
+.sidebar{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 100%;
+    margin: 0;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+}
+.list_font{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-bottom: 3vw;
+    justify-content: center;
+    align-items: center;
+}

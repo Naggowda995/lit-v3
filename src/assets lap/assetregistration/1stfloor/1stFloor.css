@@ -1,0 +1,50 @@
+/* Vender_registration.css */
+
+
+/* .Register-form {
+    max-width: 60px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+ 
+  .form-section {
+    margin-bottom: 20px;
+  }
+ 
+  h6 {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 0;
+  }
+ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+ 
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+ 
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+ 
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .submit{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+ 
+  

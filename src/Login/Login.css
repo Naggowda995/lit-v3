@@ -1,0 +1,79 @@
+.Signup_btn{
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0 0 80%;
+    background-color: black;
+    color:white;
+    font-size: 1vw;
+    
+}
+.Login_page{
+    width:35vw;
+    height:80vh;
+    border: 2px solid;
+    border-radius: 1vw;
+    margin: 10% 20% 10% 20%;
+    
+}
+.form_header{
+    display: flex;
+    justify-content:center;
+    
+}
+/* .email{
+    display: flex;
+    flex-direction: row;
+    height:5vh;
+    align-items: center;
+    justify-content: space-between;    
+} */
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin:20% ; 
+    justify-content: center;
+    align-items: center;
+
+}
+.user_value_email{
+    height:5vh;
+    width: 26vw;
+    border-radius: 1vh;
+    /* border-color: black gray gray black; */
+    /* margin-right: 1vw; */
+}
+.user_value_password{
+    height:5vh;
+    width: 26vw;
+    border-radius: 1vh;
+    /* margin-bottom: 0.1vw; */
+}
+
+/* .domain{
+    display: flex;
+    border: 2px solid ;
+    border-color: black gray gray black;
+    height:5vh;
+    width: 6vw;
+    font-size: 1vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    
+} */
+.user_value{
+    height: 5vh;
+    width: 10vw;
+    margin: 0 0 0 65%;
+    border: 1px solid;
+    border-radius: 15vh;
+    padding: 0;
+}
+.reset_password{
+    margin-top: 0%;
+    padding: 0%;
+    font-size: 1vw;
+    color: blue;
+}

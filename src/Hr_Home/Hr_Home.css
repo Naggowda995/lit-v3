@@ -1,0 +1,27 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.Home_partition{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(238, 238, 248);
+    height: 100vh;
+    width: 100%;
+}
+
+.home_screen{
+    margin: 0%;
+    padding: 3vw;
+    /* display: flex; */
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    overflow-y: scroll;
+    /* border: 5px solid red; */
+}

@@ -89,7 +89,7 @@ export const vendorDetails = async (formData, setSuccessMessage, resetFormFields
 export const client = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
   try {
     const response = await axios.post(
-      "http://localhost:3043/client/save",
+      "http://localhost:3043/client/register",
       formData
     );
  
@@ -105,6 +105,66 @@ export const client = async (formData, setSuccessMessage, resetFormFields, setEr
     );
   }
 };
+
+export const ClassDataById = async (id) => {
+  try {
+    const response = await api.get(`/client/get/${id}`
+   
+    );
+     console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching client data:', error);
+    throw error;
+  }
+};
+
+export const updateClient = async (id, formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
+  try {
+    const response = await axios.put(`http://localhost:3043/client/update/${id}`, formData);
+
+    if (response.status === 200) {
+      setSuccessMessage("Data updated successfully!");
+      resetFormFields();
+    } else {
+      setErrorMessage("Failed to update data. Please try again.");
+    }
+  } catch (error) {
+    setErrorMessage(
+      "Failed to connect to the server. Please try again later."
+    );
+  }
+};
+
+// export const deleteClient = async (id, setSuccessMessage, setErrorMessage) => {
+//   try {
+//     const response = await axios.delete(`http://localhost:3043/client/delete/${id}`);
+
+//     if (response.status === 200) {
+//       setSuccessMessage("Data deleted successfully!");
+//     } else {
+//       setErrorMessage("Failed to delete data. Please try again.");
+//     }
+//   } catch (error) {
+//     setErrorMessage(
+//       "Failed to connect to the server. Please try again later."
+//     );
+//   }
+// };
+
+
+
+export const deleteClient = async (id) => {
+  try {
+    const response = await axios.delete(`http://localhost:3043/client/delete/${id}`);
+    return { success: true, message: "Data deleted successfully!" };
+  } catch (error) {
+    return { success: false, message: "Failed to delete data. Please try again." };
+  }
+};
+
+
+
  
  
 
@@ -130,7 +190,7 @@ export const itrecruitment = async (formData) => {
 export const requirement = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
   try {
     const response = await axios.post(
-      "http://localhost:3043//requirement/savetechnology",
+      "http://localhost:3043//requirement/save/technology",
       formData
     );
     console.log("hi")
@@ -150,18 +210,7 @@ export const requirement = async (formData, setSuccessMessage, resetFormFields, 
  
 
  
-export const ClassDataById = async (id) => {
-  try {
-    const response = await api.get(`/client/get/${id}`
-   
-    );
-     console.log(response);
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching client data:', error);
-    throw error;
-  }
-};
+
 
 export const AssetRegister  = async (formData, resetFormFields) => {
   try {

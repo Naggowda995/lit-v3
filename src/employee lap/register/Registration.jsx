@@ -1008,7 +1008,7 @@ export default function Registration() {
       {/* Section 12: Bank Details (For Salary Remittance) */}
       <div className="form-section">
         <h6 onClick={() => toggleAccordion("bankDetails")}>
-          {accordionState.bankDetails ? "12. Bank Details -" : "12. Bank Details +"}
+          {accordionState.bankDetails ? "11. Bank Details -" : "11. Bank Details +"}
         </h6>
         {accordionState.bankDetails && (
           <table>

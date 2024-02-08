@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ClassDataById, updateClient, deleteClient } from '../../../http-common';
 import "./Client_Management.css";
@@ -10,14 +11,12 @@ const Client_Management = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [editMode, setEditMode] = useState(null);
   const [editedValues, setEditedValues] = useState({ id: null, clientName: '', contactNo: '', emailId: '' });
-  
-
 
   const handleInputChange = (e) => {
     setClientId(e.target.value);
-    fetchData();
   };
 
+  
   const fetchData = async () => {
     try {
       setSearchResults([]);
@@ -26,27 +25,28 @@ const Client_Management = () => {
       setSearchResults([response]);
       setError(null);
     } catch (error) {
-       console.error('Error fetching data:', error);  
+      console.error('Error fetching data:', error);  
       setError('Data not found');
       setSearchResults([]);
     }
   };
 
-  const handleUpdate = async (id) => {
+  const handleUpdate = async (id, formData) => {
     try {
-      const response = await updateClient(id, clientData);
+      const response = await updateClient(id, formData);
       if (response.status === 200) {
-        setError(null);
         setSuccessMessage("Data updated successfully!");
         setClientData(""); // Clear the clientData after successful update
         fetchData(); // Refetch data after update
+        setError(null); // Reset error state
       } else {
-        setError('Failed to update data');
+        // setError('Failed to update data');
       }
     } catch (error) {
-      setError('Failed to update data');
+      // setError('Failed to update data');
     }
   };
+  
 
   const handleDelete = async (id) => {
     try {
@@ -71,12 +71,18 @@ const Client_Management = () => {
     setEditedValues({ ...rowToEdit });
   };
 
-  const handleSave = () => {
-    const updatedResults = searchResults.map((item) =>
-      item.id === editedValues.id ? editedValues : item
-    );
-    setSearchResults(updatedResults);
-    setEditMode(null);
+  const handleSave = async () => {
+    try {
+      await handleUpdate(editedValues.id, editedValues);
+      setSuccessMessage("Data updated successfully!");
+      setTimeout(() => {
+        setSuccessMessage(""); // Reset success message after a timeout
+      }, 3000); // Reset after 3 seconds
+      setEditMode(null);
+    } catch (error) {
+      console.error('Error updating data:', error);
+      setError('Failed to save changes');
+    }
   };
 
   const handleCancelEdit = () => {
@@ -112,6 +118,7 @@ const Client_Management = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Phone</th>
+            <th>Email Id</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -135,7 +142,7 @@ const Client_Management = () => {
               <td>
                 {editMode === item.id ?
                   <input type="text" value={editedValues.emailId} onChange={(e) => handleEditInputChange(e, 'emailId')} />
-                  : item.phone
+                  : item.emailId
                 }
               </td>
               <td>

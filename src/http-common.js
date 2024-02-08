@@ -123,16 +123,9 @@ export const updateClient = async (id, formData, setSuccessMessage, resetFormFie
   try {
     const response = await axios.put(`http://localhost:3043/client/update/${id}`, formData);
 
-    if (response.status === 200) {
-      setSuccessMessage("Data updated successfully!");
-      resetFormFields();
-    } else {
-      setErrorMessage("Failed to update data. Please try again.");
-    }
+    return { success: true, message: "Data updated successfully!" };
   } catch (error) {
-    setErrorMessage(
-      "Failed to connect to the server. Please try again later."
-    );
+    return { success: false, message: "Failed to update data. Please try again." };
   }
 };
 

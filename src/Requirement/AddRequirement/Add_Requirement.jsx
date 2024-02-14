@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import "./Add_Requirement.css";
 import { requirement } from "../../http-common";
  
- 
 const Add_Requirement = () => {
   const [selectedSector, setSelectedSector] = useState("IT");
   const [selectedITOption, setSelectedITOption] = useState("");
   const [selectedNon_ITOption, setSelectedNon_ITOption] = useState("");
-  const [selectedGender, setSelectedGender] = useState(null);
-  const [selectedActive, setSelectedActive] = useState(null);
+  const [selectedGender, setSelectedGender] = useState(""); // Changed null to ""
+  const [selectedActive, setSelectedActive] = useState("");
   const [isAgreed, setIsAgreed] = useState(false);
   const [fullName, setFullName] = useState("");
   const [experience, setExperience] = useState("");
   const [clientName, setClientName] = useState("");
- 
- 
  
   const options1 = [
     { value: "IT", label: "IT" },
@@ -40,8 +37,6 @@ const Add_Requirement = () => {
     setSelectedITOption(event.target.value);
     setSelectedNon_ITOption(event.target.value);
   };
- 
- 
  
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
@@ -89,8 +84,8 @@ const Add_Requirement = () => {
         setSelectedSector("");
         setSelectedITOption("");
         setSelectedNon_ITOption("");
-        setSelectedGender(null);
-        setSelectedActive(null);
+        setSelectedGender(""); // Changed null to ""
+        setSelectedActive("");
         setIsAgreed(false);
         setFullName("");
         setExperience("");
@@ -121,8 +116,8 @@ const Add_Requirement = () => {
     setSelectedSector("");
     setSelectedITOption("");
     setSelectedNon_ITOption("");
-    setSelectedGender(null);
-    setSelectedActive(null);
+    setSelectedGender(""); // Changed null to ""
+    setSelectedActive("");
     setIsAgreed(false);
     setFullName("");
     setExperience("");
@@ -234,7 +229,7 @@ const Add_Requirement = () => {
           <tr>
             <td>Gender</td>
             <td>
-            <label className="Genderplaceing">
+              <label className="Genderplaceing">
                 <input className="radio"
                   type="radio"
                   value="Male"
@@ -304,4 +299,5 @@ const Add_Requirement = () => {
 };
  
 export default Add_Requirement;
- 
+
+

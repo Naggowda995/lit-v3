@@ -18,6 +18,7 @@ export default function Client_Registration() {
  
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    
     const formData = {
       clientId,
       date,

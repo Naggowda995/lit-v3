@@ -116,8 +116,8 @@ const Client_Management = () => {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Phone</th>
+            <th>ClientName</th>
+            <th>ContactNo</th>
             <th>Email Id</th>
             <th>Action</th>
           </tr>
@@ -129,13 +129,13 @@ const Client_Management = () => {
               <td>
                 {editMode === item.id ?
                   <input type="text" value={editedValues.clientName} onChange={(e) => handleEditInputChange(e, 'clientName')} />
-                  : item.name
+                  : item.clientName
                 }
               </td>
               <td>
                 {editMode === item.id ?
                   <input type="text" value={editedValues.contactNo} onChange={(e) => handleEditInputChange(e, 'contactNo')} />
-                  : item.phone
+                  : item.contactNo
                 }
               </td>
 

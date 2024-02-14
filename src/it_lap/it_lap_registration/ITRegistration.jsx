@@ -5,31 +5,30 @@ import {
 } from "../../http-common";
 
 export default function ITRegistration() {
-  // const [name, setName] = useState("");
-  // const [mobileNumber, setMobileNumber] = useState("");
-  // const [emailId, setEmailId] = useState("");
-  // const [higherDegree, setHigherDegree] = useState("");
-  // const [passoutYear, setPassoutYear] = useState("");
-  // const [collegeName, setCollegeName] = useState("");
-  // const [university, setUniversity] = useState("");
-  // const [presentLocation, setPresentLocation] = useState("");
-  // const [referedBy, setReferedBy] = useState("");
-  // const [source, setSource] = useState("");
-  // const [interviewScheduled, setInterviewScheduled] = useState("");
-  // const [l1, setL1] = useState("");
-  // const [l2, setL2] = useState("");
-  // const [l3, setL3] = useState("");
-  // const [hrRound, setHrRound] = useState("");
-  // const [technology, setTechnology] = useState("");
-  // const [ctcLpa, setCtcLpa] = useState("");
-  // const [experience, setExperience] = useState("");
-  // const [expectedCtc, setExpectedCtc] = useState("");
-  // const [currentLocation, setCurrentLocation] = useState("");
-  // const [jobType, setJobType] = useState("");
-  // const [active, setActive] = useState("");
-  // const [inActive, setInActive] = useState("");
-  // const [successMessage, setSuccessMessage] = useState("");
-  // const [errorMessage, setErrorMessage] = useState("");
+  const [name, setName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [emailId, setEmailId] = useState("");
+  const [higherDegree, setHigherDegree] = useState("");
+  const [passoutYear, setPassoutYear] = useState("");
+  const [collegeName, setCollegeName] = useState("");
+  const [university, setUniversity] = useState("");
+  const [presentLocation, setPresentLocation] = useState("");
+  const [referedBy, setReferedBy] = useState("");
+  const [source, setSource] = useState("");
+  const [interviewScheduled, setInterviewScheduled] = useState("");
+  const [l1, setL1] = useState("");
+  const [l2, setL2] = useState("");
+  const [l3, setL3] = useState("");
+  const [hrRound, setHrRound] = useState("");
+  const [technology, setTechnology] = useState("");
+  const [ctcLpa, setCtcLpa] = useState("");
+  const [experience, setExperience] = useState("");
+  const [expectedCtc, setExpectedCtc] = useState("");
+  const [currentLocation, setCurrentLocation] = useState("");
+  const [jobType, setJobType] = useState("");
+  const [active, setActive] = useState("");
+  const [inActive, setInActive] = useState("");
+  
 
 
   const [formData, setFormData] = useState({
@@ -166,18 +165,7 @@ export default function ITRegistration() {
     }
   };
 
-  // const [formData, setFormData] = useState("");
-
-  // const handleInputChange = (section, field, value) => {
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [section]: {
-  //       ...prevData[section],
-  //       [field]: value,
-  //     },
-  //   }));
-  // };
-
+ 
   return (
     <div className="Register-form">
       <h2>IT Recruitment Lap Registration</h2>

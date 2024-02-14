@@ -129,23 +129,6 @@ export const updateClient = async (id, formData, setSuccessMessage, resetFormFie
   }
 };
 
-// export const deleteClient = async (id, setSuccessMessage, setErrorMessage) => {
-//   try {
-//     const response = await axios.delete(`http://localhost:3043/client/delete/${id}`);
-
-//     if (response.status === 200) {
-//       setSuccessMessage("Data deleted successfully!");
-//     } else {
-//       setErrorMessage("Failed to delete data. Please try again.");
-//     }
-//   } catch (error) {
-//     setErrorMessage(
-//       "Failed to connect to the server. Please try again later."
-//     );
-//   }
-// };
-
-
 
 export const deleteClient = async (id) => {
   try {
@@ -180,10 +163,22 @@ export const itrecruitment = async (formData) => {
 
 
 
+export const getitrecruitment = async (id) => {
+  try {
+    const response = await api.get(`/itrecruitment/get/{id}`); // Removed unnecessary quotes and curly braces around requirementid
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching Requirement data:', error);
+    throw error;
+  }
+};
+
+
 export const requirement = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
   try {
     const response = await axios.post(
-      "http://localhost:3043//requirement/save/technology",
+      "http://localhost:3043/requirement/save/technology",
       formData
     );
     console.log("hi")
@@ -200,10 +195,41 @@ export const requirement = async (formData, setSuccessMessage, resetFormFields, 
     );
   }
 };
- 
 
+export const Requirement = async (requirementid) => {
+  try {
+    const response = await api.get(`/requirement/get/${requirementid}`); // Removed unnecessary quotes and curly braces around requirementid
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching Requirement data:', error);
+    throw error;
+  }
+};
  
+export const updateRequirement = async (requirementId, formData) => {
+  try {
+    const response = await api.put(`/requirement/update/${requirementId}`, formData);
+    console.log(response);
+    return { success: true, message: 'Data updated successfully' };
+  } catch (error) {
+    console.error('Error updating the changes:', error);
+    throw { success: false, message: 'Failed to update data' };
+  }
+};
 
+export const deleteRequirement = async (requirementId) => {
+  try {
+    const response = await api.delete(`/requirement/delete/${requirementId}`);
+    console.log(response);
+    return { success: true, message: 'Data deleted successfully' };
+  } catch (error) {
+    console.error('Error deleting the data:', error);
+    throw { success: false, message: 'Failed to delete data' };
+  }
+};
+
+  
 
 export const AssetRegister  = async (formData, resetFormFields) => {
   try {
@@ -238,3 +264,62 @@ export const SecondAssetRegister  = async (formData, resetFormFields) => {
 };
  
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

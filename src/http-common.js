@@ -165,11 +165,10 @@ export const itrecruitment = async (formData) => {
 
 export const getitrecruitment = async (id) => {
   try {
-    const response = await api.get(`/itrecruitment/get/{id}`); // Removed unnecessary quotes and curly braces around requirementid
-    console.log(response);
+    const response = await api.get(`/itrecruitment/get/${id}`);
     return response.data;
   } catch (error) {
-    console.error('Error fetching Requirement data:', error);
+    console.error('Error fetching data:', error);
     throw error;
   }
 };
@@ -211,7 +210,7 @@ export const updateRequirement = async (requirementId, formData) => {
   try {
     const response = await api.put(`/requirement/update/${requirementId}`, formData);
     console.log(response);
-    return { success: true, message: 'Data updated successfully' };
+    return { success: true, message: 'Data updmated successfully' };
   } catch (error) {
     console.error('Error updating the changes:', error);
     throw { success: false, message: 'Failed to update data' };

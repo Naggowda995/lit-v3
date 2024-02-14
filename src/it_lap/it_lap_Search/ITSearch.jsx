@@ -1,47 +1,38 @@
 import React, { useState } from 'react';
 import './ITSearch.css';
 import { getitrecruitment } from '../../http-common';
- 
+
 const ITSearch = () => {
   const [searchCriteria, setSearchCriteria] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [error, setError] = useState('');
- 
+
   const handleInputChange = (e) => {
     setSearchCriteria(e.target.value);
   };
- 
+
   const fetchData = async () => {
     try {
       const response = await getitrecruitment(searchCriteria);
-      const res1= response;
-      console.log("hiii",response)
-      setSearchResults((prevArray) =>[
-        ...prevArray,
-        res1
-          ]);
-         
+      console.log('Response:', response); // Log the response to check data format
       if (response && response.data) {
-        setSearchResults(response.data); // Set new search results from the response data
+        setSearchResults([response.data]); // Set new search results from the response data
         setError(''); // Clear any previous error messages
-       
- 
       } else {
         setSearchResults([]); // Clear search results if no data is returned
         setError('Data not found'); // Set error message
       }
-      console.log(searchResults);
-      setError(null);
     } catch (error) {
+      console.error('Error fetching data:', error); // Log any errors
       setSearchResults([]); // Clear search results in case of error
-      setError('Data not found'); // Set error message
+      setError('Failed to fetch data'); // Set error message
     }
   };
- 
+
   return (
     <div className="search-page-container">
       <h1>Data Search and Display</h1>
- 
+
       <div className="search-bar-container">
         <label>Search by ID, Name, or Phone Number:</label>
         <input
@@ -53,7 +44,7 @@ const ITSearch = () => {
         />
         <button onClick={fetchData}>Search</button>
       </div>
- 
+
       <table className="result-table">
         <thead>
           <tr>
@@ -112,11 +103,10 @@ const ITSearch = () => {
           ))}
         </tbody>
       </table>
- 
+
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
 };
- 
+
 export default ITSearch;
- 
